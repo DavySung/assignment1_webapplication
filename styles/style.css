@@ -1,0 +1,104 @@
+/*
+filename: Davy Sung
+author: Davy Sung
+created: 23/08/2021
+last modified: 23/08/2021
+description: This is for assignment1
+*/
+
+body{
+    font-family: arial;
+    width:100%;
+}
+.navi{
+  background-color: antiquewhite;
+}
+
+nav{
+  background-color:rgba(3, 19, 53, 0.555);
+  position:sticky;
+  padding: 10px 0 10px 0;
+}
+
+#jobIllustration{
+    max-width: 600px;
+    max-height: 700px;
+    padding:10% 30% 5% 30%;
+}
+
+#description{
+    margin: 0 30% 10% 30%; 
+}
+.menu{
+  margin:0px 0 0 75px;
+  border:1px solid white;
+  background-color:hsl(219, 72%, 79%);
+  text-decoration:none;
+  color:black;
+  text-align:center;
+  font-weight:bold;
+  font-size:16px;
+  padding:10px;
+  border-radius:20%;
+}
+
+.navi{
+  width: 75%;
+  margin: 50px 0 0 0;
+  float:right;
+}
+
+.logo{
+  max-height: 100px;
+  max-width:200px;
+  float: left;
+  width: 25%;
+}
+/* Clear floats after the columns */
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+footer{
+    background-color:rgba(3, 19, 53, 0.555);
+    padding: 30px 20% 0 30%;
+    width:49%;
+    height:50px;
+}
+
+aside{
+  width:25%;
+  float:right;
+  margin: 0 50px 0 0;
+}
+.row{
+  margin: 20px 150px 20px 150px;
+  border: 2px solid black;
+  background:aliceblue;
+}
+h1{
+  text-align:center;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h2{
+  text-align:center;
+}
+
