@@ -45,11 +45,102 @@
             <a class="menu" href="enhancements.html">Enhacement</a></div>
         </nav>
     </header>
+<!--Apply.html
+	• HTML Check Text Input
+	• Text Input with Format Checking
+	• Job Ref No =5Char
+	• Names < 20Char
+	• Address < 40Char
+	• PostCode =4digits
+	• Email
+	• PhoneNum 8-12digits
+	• Appropriate Input For Date
+	• Radio Buttons for gender with fieldset
+	• Dropdown Box for state
+	• Skills Checkboxes
+	• Text Area
+	• Labels linked with 'for' (test by 'clicking' on label)
+	• Data for all inputs returned from server correctly
+-->
+    <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+        <p>
+            <label for="jobReferenceNum">Job Reference Number: </label>
+            <input type="text" name= "jobRef" id="jobReferenceNum" required="required" pattern="^[a-zA-Z0-9]{5}$"  />
+        </p>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+            <p>
+                <label for="firstName">First Name: </label>
+                <input type="text" name= "firstName" id="firstName" required="required" pattern="^[a-zA-Z]{1,20}$" />
+            </p>
+
+            <p>
+                <label for="lastName">Last Name: </label>
+                <input type="text" name= "lastName" id="lastName" required="required"  pattern="^[a-zA-Z]{1,20}$"/>
+            </p>
+
+            <p>
+                <label for="dob">Date Of Birth: </label>
+                <input type="date" name= "dob" id="dob" required="required"  />
+            </p>
+            <p>
+                <label for="email">Email Address: </label>
+                <input type="email" name= "email" id="email" required="required" 
+                pattern="/^w+[+.w-]*@([w-]+.)*w+[w-]*.([a-z]{2,4}|d+)$/i" />
+            </p>
+            <p>
+                <label for="phone">Phone Number: </label>
+                <input type="text" name= "phone" id="phone" required="required"  pattern="^(?:\s*\d){8,12}$"/>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Gender</legend>
+            <p><label for="male">Male</label> 
+				<input type="radio" id="male" name="gender" value="male"/>
+			<label for="female">Female</label> 
+				<input type="radio" id="female" name="gender" value="female"/>
+			</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Address</legend>
+            <p>
+                <label for="streetAddress">Street Address: </label>
+                <input type="text" name= "streetAddress" id="streetAddress" required="required" pattern="^[a-zA-Z0-9]{1,40}$"/>
+            </p>
+            <p>
+                <label for="suburb">Suburb/Town: </label>
+                <input type="text" name= "suburb" id="suburb" required="required" pattern="^[a-zA-Z0-9]{1,40}$" />
+            </p>
+            <p><label for="state">State</label> 
+                <select name="state" id="state">
+                    <option value="vic">VIC</option>			
+                    <option value="nsw">NSW</option>
+                    <option value="qld">QLD</option>
+                    <option value="nt">NT</option>
+                    <option value="wa">WA</option>
+                    <option value="sa">SA</option>
+                    <option value="tas">TAS</option>
+                    <option value="act">ACT</option>
+                </select>
+            </p>
+            <p>
+                <label for="postcode">Postcode: </label>
+                <input type="text" name= "postcode" id="postcode" required="required"  pattern="[0-9]{4}"/>
+            </p>
+        </fieldset>
+
+        <input type= "submit" value="Register"/>
+        <input type= "reset" value="Reset Form"/>
+
+    </form>
+
     <footer>
-        <strong>&copy;<a href="http://www.swinburne.edu.au" >Swinburne University of Technology</strong></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <strong>&copy;<a href="http://www.swinburne.edu.au" >Swinburne University of Technology</a></strong>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <strong>Created by:</strong><a href="mailto:103535521@student.html.edu.au" > Davy Sung</a> 
     </footer>
-    
 </body>
 
 </html>
