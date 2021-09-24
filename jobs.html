@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Demonstrates CSS layout" />
-  <meta name="keywords" content="HTML5, CSS layout" />
+  <meta name="description" content="Demonstrate each job position" />
+  <meta name="keywords" content="Job Description, Software Architect, .NET Developer" />
   <meta name="author" content="Davy Sung"  />
   
-  <title>Assignment1</title>
+  <title>Job Description</title>
   
   <!-- References to external CSS files -->
   <link href="styles/style.css" rel="stylesheet" />
-  
+  <script src="scripts/jobs.js"></script>
+
 </head>
 
 <body>
@@ -42,24 +43,11 @@
             <a class="menu" href="index.html">Home</a> 
             <a class="menu" href="apply.html">Apply</a> 
             <a class="menu" href="about.html">About</a>
-            <a class="menu" href="jobs.html">Jobs</a>
-            <a class="menu" href="enhancements.html">Enhacement</a></div>
+            <a class="menu" href="jobs.html">Job</a>
+            <a class="menu" href="enhancements.html">Enhancement</a></div>
         </nav>
     </header>
 
-    <!--2 heading level header
-    2 Section
-    Order List
-    UnorderList
-    Aside
-    CSS:
-	• Aside 25% Viewport Width
-	• Float right
-	• Coloured Border
-	• <h1> font variant
-	• Size family set
-    Footer full page width
-    -->
     <h1>Position Description</h1>
     <article class="row">
         <h2>Position 1</h2>
@@ -100,10 +88,14 @@
                  <li>We welcome applicants from Senior Developer backgrounds if the above criteria are met</li>
             </ul></li>
         </ol>
+        
         </section>
+        <form action="apply.html" id="submitForm">      
         <aside id="aside1">
             <img src="images/WorkFromHome.png" alt="work" width="300" height="300"/>
+            <button type="submit" class="button" id="submit1" name="submit1" value="SA001">Apply Now</button>
         </aside></article>
+
         <article class="row">
             <h2>Position 2</h2>
         <section class="column" id="section2">
@@ -147,7 +139,10 @@
         </section>
         <aside id="aside2">
             <img src="images/WorkFromHome.png" alt="work" width="300" height="300"/>
+            <button type="submit" class="button" id="submit2" name="submit2" value="ND002">Apply Now</button>
+            
         </aside>
+        </form>
     </article>
 
 
