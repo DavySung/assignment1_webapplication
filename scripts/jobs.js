@@ -27,7 +27,7 @@ function sendInfo(){
 function prefill_form(){
     
         
-            document.getElementById("jobReferenceNum").value = localStorage.jobReferenceNum;
+        //document.getElementById("jobReferenceNum").value = sessionStorage.jobReferenceNum;
             document.getElementById("firstName").value = sessionStorage.firstname;
             document.getElementById("lastName").value = sessionStorage.lastname;
             document.getElementById("dob").value = sessionStorage.dob;
@@ -100,7 +100,11 @@ function init() {
                 localStorage.jobReferenceNum = "SA001";
                 sessionStorage.firstTimer = "True";
                 sendInfo();
-            }else prefill_form();
+            }else {
+                localStorage.jobReferenceNum = "SA001";
+                sessionStorage.jobReferenceNum = "SA001"; 
+                prefill_form();
+            }
                
       
     };
@@ -111,7 +115,11 @@ function init() {
                 localStorage.jobReferenceNum = "ND002";
                 sessionStorage.firstTimer = "True";
                 sendInfo();
-            }else prefill_form();
+            }else {
+                localStorage.jobReferenceNum = "ND002";
+                sessionStorage.jobReferenceNum = "ND002"; 
+                prefill_form();
+            }
            
     }
     

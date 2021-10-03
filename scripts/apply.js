@@ -280,7 +280,7 @@ function prefill_form(){
     }
     else if(sessionStorage.firstTimer == "False"){
         if(localStorage.jobReferenceNum != undefined){
-            document.getElementById("jobReferenceNum").value = localStorage.jobReferenceNum;
+            document.getElementById("jobReferenceNum").value = sessionStorage.jobReferenceNum;
             document.getElementById("firstName").value = sessionStorage.firstname;
             document.getElementById("lastName").value = sessionStorage.lastname;
             document.getElementById("dob").value = sessionStorage.dob;
