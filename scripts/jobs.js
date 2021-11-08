@@ -103,7 +103,7 @@ function init() {
             }else {
                 localStorage.jobReferenceNum = "SA001";
                 sessionStorage.jobReferenceNum = "SA001"; 
-                prefill_form();
+                //prefill_form();
             }
                
       
@@ -118,7 +118,7 @@ function init() {
             }else {
                 localStorage.jobReferenceNum = "ND002";
                 sessionStorage.jobReferenceNum = "ND002"; 
-                prefill_form();
+                //prefill_form();
             }
            
     }

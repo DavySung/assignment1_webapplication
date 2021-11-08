@@ -8,7 +8,7 @@
 */
 
 "use strict";
-
+var debug= false;
 function validation(){
 
     var msg = "";
@@ -28,7 +28,7 @@ function validation(){
     }
     var email = document.getElementById("email").value;
     if(!email.match(/[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-zA-Z0-9.-]/)){
-        msg += "Please enter a valid email address<br />";
+        msg += "Please enter a valid email<br />";
         result =false;
     }
     var phone = document.getElementById("phone").value;
@@ -276,7 +276,7 @@ function sendInfo(){
 function prefill_form(){
     if(sessionStorage.firstTimer == undefined){
         alert("Go To Apply From Job Page!")
-        window.location.assign("jobs.html");
+        window.location.assign("jobs.php");
     }
     else if(sessionStorage.firstTimer == "False"){
         if(localStorage.jobReferenceNum != undefined){
@@ -341,7 +341,7 @@ function prefill_form(){
         }
         else{
             alert("Go To Apply From Job Page!")
-            window.location.assign("jobs.html");
+            window.location.assign("jobs.php");
         }
        
     }
@@ -355,12 +355,15 @@ function prefill_form(){
 // this function is called when the browser window loads
 // it will register functions that will respond to browser events
 function init() {
-    //console.log(include('enhancements.js'))
-    //document.querySelector("#skillDes").style.display = "none"; 
+    
     prefill_form();
     var regForm = document.getElementById("regform");
-    regForm.onsubmit = validation; //register the event listener
+    regForm.onsubmit = validation;
 
+
+
+    
+    
 }
 
 window.addEventListener("load", init);

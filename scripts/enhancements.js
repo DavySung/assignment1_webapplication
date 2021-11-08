@@ -6,10 +6,10 @@
 *Last Updated: 24/09/2021
 *Credits: 
 */
-
+// "use strict";
 //Timeout Function for apply.html
 //src = https://stackoverflow.com/questions/20618355/how-to-write-a-countdown-timer-in-javascript
-function startTimer(duration, display) {
+function startTimer(duration, display, page) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10);
@@ -27,7 +27,7 @@ function startTimer(duration, display) {
         
         if (--timer < 0) {
             timer = duration;
-            window.location.assign("jobs.html")
+            window.location.assign(page)
         }
     }, 1000);
 }
@@ -127,10 +127,12 @@ function fillInAddress() {
   address1Field.focus();
 }
 
+
+
 function init2(){
 
-        $("#skillDes").hide();
-        $("#error").hide();
+       $("#skillDes").hide();
+       $("#error").hide();
        
         $("#otherskills").click(function () {
             if ($(this).is(":checked")) {
@@ -142,10 +144,10 @@ function init2(){
             }
         });
         initAutocomplete();
+        var page="jobs.php";
         var twentyMinutes = 60 * 7,
         display = document.querySelector('#timeLimit');
-        startTimer(twentyMinutes, display);
-
+        startTimer(twentyMinutes, display, page);
 }
 
 window.addEventListener("load", init2);
